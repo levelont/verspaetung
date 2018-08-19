@@ -1,0 +1,5 @@
+java -jar "C:\Program Files\Swagger/swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar" \
+generate \
+-i "C:\Program Files\Swagger/swagger-codegen/modules/swagger-codegen/src/test/resources/2_0/petstore.yaml" \
+-l go-server \
+-o swagger-petstore-gen-go-server
