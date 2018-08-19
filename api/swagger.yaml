@@ -1,0 +1,41 @@
+---
+swagger: "3.0.0"
+info:
+  description: "Verspaetung public transport information"
+  version: "1.0.0"
+  title: "Verspaetung API"
+host: "localhost:8081"
+paths:
+  /lines:
+    get:
+      summary: "Returns the vehicles for a given time and coordinates"
+      parameters:
+      - name: "timestamp"
+        in: "query"
+        description: "The timestamp"
+        required: true
+        type: "string"
+        x-exportParamName: "Timestamp"
+      - name: "x"
+        in: "query"
+        description: "The line x coordinate"
+        required: true
+        type: "integer"
+        x-exportParamName: "X"
+      - name: "y"
+        in: "query"
+        description: "The line y coordinate"
+        required: true
+        type: "integer"
+        x-exportParamName: "Y"
+  /lines/{name}:
+    get:
+      summary: "Returns boolean indicating if given line is currently delayed"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "The line name"
+        required: true
+        type: "string"
+        x-exportParamName: "Name"
+definitions: {}
